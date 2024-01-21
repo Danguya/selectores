@@ -1,0 +1,100 @@
+
+
+body{
+    
+}
+
+*{
+    border: none;
+    outline: none;
+    padding: none;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 8px;
+}
+
+/* Selector por descendencia */
+.box .sub-box {
+    background-color: pink;
+    width: 40px;
+    height: 40px;
+}
+
+/* Selector por filho direto do parent */
+.box > div > .sub-box {
+    background-color: violet;
+    width: 40px;
+    height: 40px;
+}
+
+/* Selector que pega o elemento que vem apos
+um elemento especifico */
+.caixas .box + p {
+    background-color: red;
+}
+
+/* Selector irmao */
+.algo ~ div{
+    background-color: red;
+}
+
+/* selector por atributo */
+input[type="email"]{
+    background-color: #ccc;
+    padding: 8px 16px;
+    border-radius: 3px;
+}
+
+/* Selector para foco */
+#input:focus {
+    border: 2px solid green;
+}
+
+/* Para input com valor invalido */
+#input:invalid{
+    border: 2px solid red;
+}
+
+/* Para input com valor valido */
+#input:valid{
+    border: 2px solid blue;
+}
+
+
+/* Quando o usuario ativar tela cheia */
+:-webkit-fullscreen {
+    border-radius: 30px;
+    background-color: blueviolet;
+}
+:-ms-fullscreen {
+    border-radius: 30px;
+    background-color: blueviolet;
+}
+:fullscreen {
+    border-radius: 30px;
+    background-color: blueviolet;
+}
+
+h1::first-letter{
+    font-size: 70px;
+    color: blueviolet;
+
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+    cursor: pointer;
+}
+
+/* aplica o estilo quando checado */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked{
+    height: 70px;
+    width: 70px;
+    accent-color: blueviolet;
+} 
